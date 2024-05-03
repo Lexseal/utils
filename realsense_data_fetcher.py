@@ -27,7 +27,7 @@ class Worker(Node):
             msg.height, msg.width
         ).astype(np.float32) / 1000.0  # realsense default unit is mm
 
-class RSDataFetcher:
+class RSDataFetcherROS:
     def __init__(self):
         rclpy.init()
         self.rs_data_fetcher = Worker()
